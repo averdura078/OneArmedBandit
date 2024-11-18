@@ -27,6 +27,9 @@ namespace OneArmedBandit
             int reel2Value = randGenerator.Next(1, 4);
             int reel3Value = randGenerator.Next(1, 4);
 
+    //        for (int i = )
+
+
             // check value of reel 1 with a switch statement and set appropriate image
             switch (reel1Value)
             {
