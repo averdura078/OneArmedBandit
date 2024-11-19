@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace OneArmedBandit
 {
@@ -27,7 +28,23 @@ namespace OneArmedBandit
             int reel2Value = randGenerator.Next(1, 4);
             int reel3Value = randGenerator.Next(1, 4);
 
-    //        for (int i = )
+            for (int i = 1; i <= 10; i++)
+            {
+                pictureBox1.BackgroundImage = Properties.Resources.cherry_100x125;
+                //Refresh(pictureBox1.BackgroundImage);
+                Thread.Sleep(5);
+
+                pictureBox1.BackgroundImage = Properties.Resources.diamond_100x125;
+                Refresh();
+                Thread.Sleep(5);
+
+                pictureBox1.BackgroundImage = Properties.Resources._7_100x125;
+                Refresh();
+                Thread.Sleep(5);
+            }
+
+            //changing of the image, followed by a refresh, followed by a short pause. 
+            //To make it look even better have the pause get longer and longer as the reels spin. 
 
 
             // check value of reel 1 with a switch statement and set appropriate image
